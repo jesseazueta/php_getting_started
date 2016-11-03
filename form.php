@@ -5,13 +5,22 @@
     <title>PHP</title>
   </head>
   <body>
-    <?php
-      if (issset($_POST['submit'])) {
-        //process form
-        printf ('%s %s', 'value 1', 'value 2');
-      }
-      ?>
-    <form action="" method="post">
+  <?php
+    if (isset($_POST['submit'])) {
+      //process form
+      printf ('User name: %s
+      <br/>Password: %s
+      <br/>Gender: %s
+      <br/>Color: %s
+      <br/>Language(s): %s
+      <br/>Comments: %s
+      <br/>T &amp; C: %s',
+      $_POST['name'],
+      $_POST['password'],'', '','',
+      $_POST['comments'], '');
+    }
+  ?>
+    <form  method="post" action="">
       Username: <input type="text" name="name"><br/>
       Password: <input type="password" name="password"><br/>
       Gender:
